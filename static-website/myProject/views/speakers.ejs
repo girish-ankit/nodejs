@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/templates/head.ejs %></head>
+  <body class="<%= page %>">
+    <% include partials/templates/header.ejs %>
+    
+    
+
+    <section class="layout">
+    	<div class="primary">
+    		
+            <% include partials/contents/speakerslist.ejs %>
+    	</div>
+
+    	<aside class="secondary">
+    	<% include partials/contents/nextmeeting.ejs %>
+    	<% include partials/contents/artworklist.ejs %>
+    	    
+    	</aside>
+    	
+    </section>
+
+
+    <% include partials/templates/footer.ejs %>
+    <% include partials/templates/jsdefaults.ejs %>
+  </body>
+</html>

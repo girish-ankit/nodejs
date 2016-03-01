@@ -1,0 +1,26 @@
+{
+  "name": "node_login",
+  "version": "1.0.0",
+  "description": "This project show you demo of user login functionality by nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "forms": "^1.1.4",
+    "mongoose": "^4.4.4",
+    "nodemon": "^1.9.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><% include partials/page/head.ejs  %>
+    
+  </head>
+  <body class="<%= className %>" >
+  <head>
+  <% include partials/page/header.ejs  %>
+
+	  <div class="container">
+	    <h1><%= title %> 
+	    <!-- Conditional Statement -->
+		<% if(typeof(name) !==  'undefined') { %>
+			<%= name %>
+
+		<% } %>
+
+	    </h1>
+	    <h3>Global data : <%= myData %> </h3>
+
+		
+
+	    <p>Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. Home page dummy content. 
+	    </p>
+
+	<!-- How to add javascipt in ejs template just write code in butween <% %> -->
+
+	<!-- Conditional Statement -->
+		<% if(typeof(users) !==  'undefined') { %>
+			<ul>
+
+				<%  for(var i=0; i<users.length; i++) { %>
+				<li><%= users[i]  %></li>
+				<% } %>
+				
+			</ul>
+
+		<% } %>
+
+	
+
+	</div><!-- container div -->
+
+	<% include partials/page/footer.ejs %>
+	<% include partials/page/jsdefault.ejs %>
+
+   
+  </body>
+</html>
+
+
+
+
+
+

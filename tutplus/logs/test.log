@@ -1,0 +1,5 @@
+[2016-02-16 00:18:05.099] [DEBUG] ankit - Got cheese.
+[2016-02-16 00:18:05.107] [INFO] ankit - Cheese is Gouda.
+[2016-02-16 00:18:05.110] [WARN] ankit - Cheese is quite smelly.
+[2016-02-16 00:18:05.110] [ERROR] ankit - Cheese is too ripe!
+[2016-02-16 00:18:05.111] [FATAL] ankit - Cheese was breeding ground for listeria.

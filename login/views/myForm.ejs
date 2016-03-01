@@ -1,0 +1,94 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body        { padding-top:80px; }
+        .form-group.required .control-label:after {
+           content:"*";
+           color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <h2><%= title %></h2>
+  <p><%= description %></p>
+
+    <form action="<%= action %>" method="post">
+
+
+
+    <% if (fields.length) { %>
+      <% fields.forEach(function(field){ %>
+        <div class="form-group">
+          <label><%= field.name %></label>
+
+            <!-- // text & password field -->
+          <% if(field.type=='text' || field.type=='password') {%>
+          <input type="<%= field.type %>" name="<%= field.name %>"  class="form-control" <% if (field.property) { %> <%= field.property %> <% } %> >
+          <% } %>
+
+          <!-- // text & password field -->
+        <% if(field.type=='file') {%>
+          <span class="btn btn-default btn-file">
+                <input type="<%= field.type %>" <% if (field.property) { %> <%= field.property %> <% } %> >
+            </span>
+
+        <% } %>
+
+         <!--  // textarea field -->
+           <% if(field.type=='textarea') {%>
+             <textarea class="form-control" rows="5" id="comment" rows= "<%= field.rows %>" <% if (field.property) { %> <%= field.property %> <% } %> ></textarea>
+             <% } %>
+         <!--  // textarea field -->
+
+           <!-- checkbox field or radio field -->
+          <% if(field.type=='checkbox' || field.type=='radio') {%>
+
+              <% if (field.options.length) { %>
+                <% for(var i=0; i < field.options.length; i++) { %>
+                  <div class="<%= field.type %>">
+                   <label><input type="<%= field.type %>" value="<%= field.options[i].value %>"> <%= field.options[i].title %> </label>
+
+                  </div>
+                <% } %>
+                <% } %>
+
+
+          <% } %>
+
+          <!-- checkbox field or radio field -->
+
+
+
+          <!-- select field -->
+          <% if(field.type=='select') {%>
+
+            <select class="form-control" id="sel1">
+              <% if (field.options.length) { %>
+                <% for(var i=0; i < field.options.length; i++) { %>
+                   <option value=" <%= field.options[i].value %>"> <%= field.options[i].title %></option>
+
+
+                <% } %>
+                <% } %>
+                </select>
+          <% } %>
+
+          <!-- select field -->
+
+
+        </div>
+      <% }) %>
+    <% } %>
+
+  <button type="submit"><%= title %></button> <!--Title for button is same as that of the page-->
+  </form>
+
+</div>
+</body>
+</html>

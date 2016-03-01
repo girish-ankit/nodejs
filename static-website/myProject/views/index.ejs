@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/templates/head.ejs %></head>
+  <body class="<%= page %>">
+    <% include partials/templates/header.ejs %>
+    <% include partials/contents/speakerslist.ejs %>
+    
+
+    <section class="layout">
+    	<div class="primary">
+    		
+         <% include partials/contents/whoarewe.ejs %>
+    	 <% include partials/contents/getbusy.ejs %>
+    	 <% include partials/contents/whoshouldcome.ejs %>
+    	</div>
+
+    	<aside class="secondary">
+    	<% include partials/contents/nextmeeting.ejs %>
+    	<% include partials/contents/artworklist.ejs %>
+    	    
+    	</aside>
+    	
+    </section>
+
+
+    <% include partials/templates/footer.ejs %>
+    <% include partials/templates/jsdefaults.ejs %>
+  </body>
+</html>

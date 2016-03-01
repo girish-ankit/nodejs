@@ -1,0 +1,31 @@
+<article class="speakerslist">
+  <section class="layout">
+    <div class="speakers">
+    <% artists.forEach(function(item){ %>
+
+     	<article class="artist group">
+	      <h3><%= item.title %>
+	          <span class="small"><a href="/speakers/<%= item.shortname %>"><%= item.name %></a></span>
+	      </h3>
+
+	      <p><a href="/speakers/<%= item.shortname %>"><img src="/images/speakers/<%= item.shortname %>_tn.jpg" alr="photo of <%= item.name %>" /></a></p>
+      </article>
+
+      <% if (page !='home') { %>
+         <% if(page == 'artistList') { %>
+              <%= item.summary %>
+         <% } else {  %>
+         <!-- ###########  following tag  is used for html format  ############--> 
+            <%- item.description %>
+         <% }  %>
+    <%  }  %>
+
+    <% }) %>
+      
+      
+    
+     
+    </div>
+  </section>
+    
+</article>

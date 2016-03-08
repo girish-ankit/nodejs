@@ -1,0 +1,17 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "This project is  created to demo rest api in nodejs using express frame work",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  }
+}

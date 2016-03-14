@@ -12,8 +12,25 @@ var connection = mysql.createConnection({ // Mysql Connection
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Body parser use JSON data
 
+// cross domain request
+
+//CORS middleware
+var allowCrossDomain = function(req, res, next) {
+    console.log(req.headers.origin);
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+}
+
+
+app.use(allowCrossDomain);
+
 // setting template engine
 app.set('view engine','ejs');
+
+
 
 
 app.get('/',function(req,res){
